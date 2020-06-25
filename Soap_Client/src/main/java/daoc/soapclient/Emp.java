@@ -18,27 +18,12 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "I_EmpleadoService", targetNamespace = "http://soapjaxws.daoc/")
+@WebService(name = "Emp", targetNamespace = "http://soapjaxws.daoc/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
-public interface IEmpleadoService {
+public interface Emp {
 
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "createEmpleado", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.CreateEmpleado")
-    @ResponseWrapper(localName = "createEmpleadoResponse", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.CreateEmpleadoResponse")
-    @Action(input = "http://soapjaxws.daoc/I_EmpleadoService/createEmpleadoRequest", output = "http://soapjaxws.daoc/I_EmpleadoService/createEmpleadoResponse")
-    public void createEmpleado(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1);
 
     /**
      * 
@@ -49,8 +34,23 @@ public interface IEmpleadoService {
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "getAllEmpleados", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.GetAllEmpleados")
     @ResponseWrapper(localName = "getAllEmpleadosResponse", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.GetAllEmpleadosResponse")
-    @Action(input = "http://soapjaxws.daoc/I_EmpleadoService/getAllEmpleadosRequest", output = "http://soapjaxws.daoc/I_EmpleadoService/getAllEmpleadosResponse")
+    @Action(input = "http://soapjaxws.daoc/Emp/getAllEmpleadosRequest", output = "http://soapjaxws.daoc/Emp/getAllEmpleadosResponse")
     public List<Empleado> getAllEmpleados();
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "createEmpleado", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.CreateEmpleado")
+    @ResponseWrapper(localName = "createEmpleadoResponse", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.CreateEmpleadoResponse")
+    @Action(input = "http://soapjaxws.daoc/Emp/createEmpleadoRequest", output = "http://soapjaxws.daoc/Emp/createEmpleadoResponse")
+    public void createEmpleado(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
 
     /**
      * 
@@ -62,7 +62,7 @@ public interface IEmpleadoService {
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "getEmpleado", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.GetEmpleado")
     @ResponseWrapper(localName = "getEmpleadoResponse", targetNamespace = "http://soapjaxws.daoc/", className = "daoc.soapclient.GetEmpleadoResponse")
-    @Action(input = "http://soapjaxws.daoc/I_EmpleadoService/getEmpleadoRequest", output = "http://soapjaxws.daoc/I_EmpleadoService/getEmpleadoResponse")
+    @Action(input = "http://soapjaxws.daoc/Emp/getEmpleadoRequest", output = "http://soapjaxws.daoc/Emp/getEmpleadoResponse")
     public Empleado getEmpleado(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);

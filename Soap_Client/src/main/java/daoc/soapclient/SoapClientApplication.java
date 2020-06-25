@@ -20,8 +20,8 @@ public class SoapClientApplication implements CommandLineRunner {
 //        URL url = new URL("http://localhost:8080/empleados?wsdl");
 //        EmpleadoServiceService servicio = new EmpleadoServiceService(url);
         
-        EmpleadoServiceService servicio = new EmpleadoServiceService();
-        IEmpleadoService proxy = servicio.getEmpleadoServicePort();
+        EmpService servicio = new EmpService();// En el wsdl: service name="EmpService"
+        Emp proxy = servicio.getEmpPort();// En el wsdl: portType name="Emp"; port name="EmpPort" (con el prefijo get)
  
         proxy.createEmpleado("Diego", "profe");
         proxy.createEmpleado("Vero", "jefa");
